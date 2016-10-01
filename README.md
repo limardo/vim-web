@@ -1,6 +1,6 @@
 ##Installer##
 run command
 ```
-$ chmod a+r install.sh
+$ chmod a+x install.sh
 $ ./install.sh
 ```
