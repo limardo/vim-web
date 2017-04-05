@@ -34,6 +34,7 @@ Plugin 'othree/html5.vim'
 Plugin 'moll/vim-node'
 Plugin 'syngan/vim-vimlint'
 Plugin 'mattn/emmet-vim'
+Plugin 'leafgarland/typescript-vim'
 
 " Utils
 Plugin 'tpope/vim-surround'
