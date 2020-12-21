@@ -1,1 +1,0 @@
-nmap <Leader>1 :NERDTreeToggle<cr>  " <, + 1> - Open NERDTree
