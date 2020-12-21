@@ -24,8 +24,6 @@ function! MyVim#defaults#options() abort
 
   " let mapleader = ','
 
-  set nocompatible
-
   set number                      " Side Number
   set cursorline                  " Highlight current line
   set wildmenu                    " Oneline <tab> menu

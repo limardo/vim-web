@@ -9,7 +9,7 @@ function! MyVim#module#filetree#init() abort
   let g:NERDTreeWinPos = 'left'
   let g:NERDTreeWinSize=get(g:,'NERDTreeWinSize',31)
   let g:NERDTreeChDirMode=get(g:,'NERDTreeChDirMode',1)
-  let g:NERDTreeShowHidden = get(g:, '_spacevim_filetree_show_hidden_files', 1)
+  let g:NERDTreeShowHidden = 1
 
   autocmd!
   autocmd VimEnter * NERDTree | wincmd p
