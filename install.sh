@@ -9,6 +9,9 @@ MYGVIM=$MYBASEDIR/.gvimrc
 HOME=$(printf "%q\n" "$(eval echo '~')")
 SYSTEM="$(uname -s)"
 
+# Install vimscripts
+git clone --depth=1 https://github.com/limardo/vim-web.git $HOME/.vim
+
 # Install dein.vim
 git clone --depth=1 https://github.com/Shougo/dein.vim $HOME/.vim/bundles/dein.vim
 
@@ -26,7 +29,7 @@ rm -rf $HOME/.local/share/fonts/DejaVuSansMono.zip
 
 
 if [ $SYSTEM == "Darwin" ]; then
-  cp $HOME/.local/share/fonts/* $HOME/Library/Fonts/
+  cp $HOME/.local/share/fonts/*.ttf $HOME/Library/Fonts/
 fi
 
 # Install Plugins

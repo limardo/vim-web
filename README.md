@@ -3,6 +3,5 @@
 run command
 
 ```
-$ chmod a+x install.sh
-$ ./install.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/limardo/vim-web/master/install.sh)"
 ```
