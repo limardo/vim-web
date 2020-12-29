@@ -10,5 +10,7 @@ endif
 let g:root_folder = fnamemodify(resolve(fnamemodify(expand('<sfile>'), ':p:h:gs?\\?/?')), ':p:gs?[\\/]?/?')
 let &rtp = g:root_folder . ',' . $VIMRUNTIME
 
+lockvar g:root_folder
+
 call MyVim#begin()
 call MyVim#end()

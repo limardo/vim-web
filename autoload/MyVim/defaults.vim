@@ -142,23 +142,33 @@ function! MyVim#defaults#search() abort
 endfunction
 
 function! MyVim#defaults#mapping() abort
-  nnoremap <silent><Leader>e :vsplit<CR>
-  nnoremap <silent><Leader>d :split<CR>
+  " use Cmd+* to split editor"
+  " nnoremap <silent><D-S>e :vsplit<CR>
+  " nnoremap <silent><D-S>d :split<CR>
 
-  " Use Ctrl+* to jump between windows
-  nnoremap <silent><C-Right> :<C-u>wincmd l<CR>
-  nnoremap <silent><C-Left>  :<C-u>wincmd h<CR>
-  nnoremap <silent><C-Up>    :<C-u>wincmd k<CR>
-  nnoremap <silent><C-Down>  :<C-u>wincmd j<CR>
+  " Use Cmd+* to jump between windows
+  " nnoremap <silent><D-Right> :<C-u>wincmd l<CR>
+  " nnoremap <silent><D-Left>  :<C-u>wincmd h<CR>
+  " nnoremap <silent><D-Up>    :<C-u>wincmd k<CR>
+  " nnoremap <silent><D-Down>  :<C-u>wincmd j<CR>
 
-  "Ctrl+Shift+Up/Down to move up and down
-  nnoremap <silent><C-S-Down> :m .+1<CR>==
-  nnoremap <silent><C-S-Up> :m .-2<CR>==
-  inoremap <silent><C-S-Down> <Esc>:m .+1<CR>==gi
-  inoremap <silent><C-S-Up> <Esc>:m .-2<CR>==gi
-  vnoremap <silent><C-S-Down> :m '>+1<CR>gv=gv
-  vnoremap <silent><C-S-Up> :m '<-2<CR>gv=gv
+  "Cmd+Shift+Up/Down to move up and down
+  nnoremap <silent><D-S-Down> :m .+1<CR>==
+  nnoremap <silent><D-S-Up> :m .-2<CR>==
+  inoremap <silent><D-S-Down> <Esc>:m .+1<CR>==gi
+  inoremap <silent><D-S-Up> <Esc>:m .-2<CR>==gi
+  vnoremap <silent><D-S-Down> :m '>+1<CR>gv=gv
+  vnoremap <silent><D-S-Up> :m '<-2<CR>gv=gv
 
   " Start new line
-  inoremap <S-Return> <C-o>o
+  nnoremap <S-CR> o
+  nnoremap <D-M-CR> <S-o>
+  inoremap <S-CR> <C-o>o
+  inoremap <D-M-CR> <C-o><S-o>
+
+  " Save all
+  nnoremap <D-s> <ESC>:wa<CR>
+
+  " Close file
+  nmap <D-w> <ESC>:bd<CR>
 endfunction

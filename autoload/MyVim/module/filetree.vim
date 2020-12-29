@@ -15,7 +15,7 @@ function! MyVim#module#filetree#init() abort
   autocmd VimEnter * NERDTree | wincmd p
   autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-  nmap <C-\> :call MyVim#module#filetree#toggle()<CR> " nmap <Leader>1 :NERDTreeToggle<cr>
+  nmap <D-1> :call MyVim#module#filetree#toggle()<CR> " nmap <Leader>1 :NERDTreeToggle<cr>
 
   let g:NERDTreeStatusline = ''
 endfunction
