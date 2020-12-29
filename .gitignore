@@ -135,7 +135,7 @@ $RECYCLE.BIN/
 ### Vim Packages Manager ###
 bundles/
 
-bkp/
+.data/
 
 # End of https://www.toptal.com/developers/gitignore/api/jetbrains,vim,macos,windows,linux,visualstudiocode
 

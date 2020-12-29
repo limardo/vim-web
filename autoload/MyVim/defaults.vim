@@ -9,17 +9,6 @@ function! MyVim#defaults#options() abort
     set guioptions-=b " Hide bottom scrollbar
     set showtabline=0 " Hide tabline
     set guioptions-=e " Hide tab
-
-    try
-      set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
-    catch /^Vim\%((\a\+)\)\=:E518/
-      if has('gui_vimr')
-        " VimR has disabled support for guifont
-      else
-        throw v:exception
-      endif
-    endtry
-
   endif
 
   " let mapleader = ','
@@ -63,7 +52,7 @@ function! MyVim#defaults#options() abort
 
   set maxmempattern=100000
 
-  let g:data_dir = '.vim/'
+  let g:data_dir = g:root_folder . '/.data/'
   let g:backup_dir = g:data_dir . 'backup'
   let g:swap_dir = g:data_dir . 'swap'
   let g:undo_dir = g:data_dir . 'undofile'

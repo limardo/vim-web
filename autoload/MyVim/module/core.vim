@@ -18,5 +18,8 @@ function! MyVim#module#core#load() abort
 endfunction
 
 function! MyVim#module#core#end() abort
-  colorscheme dracula
+ echo globpath(&rtp, 'colors/dracula.vim')
+  if !empty(globpath(&rtp, 'colors/dracula.vim'))
+    colorscheme dracula
+  endif
 endfunction
